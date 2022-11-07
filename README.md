@@ -18,7 +18,7 @@ Below you can see a screenshot of the final result.
 ### Links
 
 - Repository URL: [Click here to check it out](https://github.com/GregoriM04/login-form.git)
-- Live server URL: [Click here to check it out](https:)
+- Live server URL: [Click here to check it out](https://gregorim04.github.io/login-form/)
 
 ## Process
 
