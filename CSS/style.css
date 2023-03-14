@@ -59,7 +59,7 @@ body {
     padding: 20px;
 }
 
-#form-frame .input-val {
+#form-frame .input-val, #form-frame div .input-val {
     min-width: 235px;
     min-height: 40px;
     margin: 6px;
@@ -71,9 +71,23 @@ body {
     border-bottom: 1px solid var(--dark-magenta);
 }
 
-#form-frame .input-val:focus {
+#form-frame .input-val:focus, #form-frame div .input-val:focus {
     border-bottom: 2px solid var(--dark-magenta);
     outline: none;
+}
+
+#form-frame div {
+    position: relative;
+}
+
+#form-frame div #show-hide-pass {
+    position: absolute;
+    top: 15px;
+    right: 10px;
+    cursor: pointer;
+    color: var(--dark-cyan);
+    font-weight: 500;
+    font-size: 20px;
 }
 
 #form-frame .pass-forgot {
@@ -106,6 +120,10 @@ body {
 
 
 /* Hover effects */
+#form-frame div #show-hide-pass:hover {
+    color: var(--dark-magenta);
+}
+
 #form-frame .pass-forgot:hover, #form-frame .signup:hover {
     color: var(--dark-magenta);
     text-decoration: underline;
