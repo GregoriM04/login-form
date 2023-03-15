@@ -9,7 +9,11 @@ This is a free and design focus login form with HTML and CSS.
 
 Users should be able to provide info easy and fast; and also, see view the optimal layout for the site depending on their device's screen size.
 
-Show and Hide password functionality has been added using JavaScript.
+Recent updates includes:
+
+- Show and Hide password functionality.
+
+- Spinner loader animation.
 
 ### Screenshot
 
