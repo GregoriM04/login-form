@@ -9,6 +9,8 @@
     --slight-gray: hsl(0, 0%, 86%);
     --dark-cyan: hsl(191, 78%, 40%);
     --dark-magenta: hsl(280, 77%, 41%);
+    --dark-gray: hsl(0, 0%, 16%);
+    --light-gray: hsl(0, 0%, 59%);
 
     --main-font: 'Work Sans', sans-serif;
     --secondary-font: 'Montserrat', sans-serif;
@@ -25,7 +27,8 @@
 
 body {
     background: var(--dark-cyan);
-    background: linear-gradient(37deg, var(--dark-cyan) 16%, var(--dark-magenta)); 
+    background: linear-gradient(37deg, var(--dark-cyan) 16%, var(--dark-magenta));
+    background-repeat: no-repeat; 
     width: 100%;
     height: 100vh;
 }
@@ -47,7 +50,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #fff;
+    background-color: var(--white);
     transition: opacity 0.75s, visibility 0.75s;
 }
 
@@ -70,7 +73,7 @@ body {
 #form-frame {
     background-color: var(--white);
     min-width: 350px;
-    min-height: 400px;
+    min-height: 450px;
     border-radius: 10px;
     display: flex;
     align-items: center;
@@ -129,22 +132,59 @@ body {
 }
 
 #form-frame #submit-btn {
-    min-width: 240px;
-    min-height: 40px;
-    margin: 6px;
+    width: 240px;
+    height: 40px;
+    margin: 10px;
+    color: var(--dark-gray);
     background-color: var(--slight-gray);
+    border: 1px solid var(--dark-magenta);
     font-size: 16px;
     border-radius: 20px;
 }
 
+#form-frame #submit-btn:active {
+    transform: scale(0.95);
+    box-shadow: 3px 2px 22px 1px rgba(0, 0, 0, 0.24);
+}
+
 #form-frame .signup {
     font-size: 14px;
-    margin-top: 5px;
+    margin-top: 10px;
+    padding-bottom: 40px;
     text-decoration: none;
 }
 
 #form-frame .signup:link, #form-frame .signup:visited {
     color: var(--dark-cyan);
+}
+
+.google-login {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: 10px auto;
+    width: 240px;
+    height: 40px;
+    background-color: var(--slight-gray);
+    padding: 5px;
+    border-radius: 20px;
+    text-decoration: none;
+    color: var(--dark-gray);
+    cursor: pointer;
+}
+
+.google-login:active {
+    transform: scale(0.95);
+    box-shadow: 3px 2px 22px 1px rgba(0, 0, 0, 0.24);
+}
+
+.google-login .google-icon {
+    width: 30px;
+    height: auto;
+}
+
+.google-login .google-name {
+    color: var(--dark-gray);
 }
 
 
@@ -156,15 +196,29 @@ body {
 #form-frame .pass-forgot:hover, #form-frame .signup:hover {
     color: var(--dark-magenta);
     text-decoration: underline;
-    transition: all 0.1s ease-out;
-    -webkit-transition: all 0.1s ease-out;
+    transition: all 0.2s ease-out;
+    -webkit-transition: all 0.2s ease-out;
 }
 
 #form-frame #submit-btn:hover {
     background-color: var(--dark-magenta);
     color: var(--white);
     transition: all 0.2s ease-in;
+    -webkit-transition: all 0.2s ease-out;
 }
+
+.google-login:hover {
+    background-color: var(--light-gray);
+    transition: all 0.2s ease-in;
+    -webkit-transition: all 0.2s ease-out;
+}
+
+.google-login:hover .right-arrow {
+    transform: scale(1.2) translateX(2px);
+    transition: all 0.2s ease-in;
+    -webkit-transition: all 0.2s ease-out;
+}
+
 
 /* Keyframes Animations */
 /* Spinner */

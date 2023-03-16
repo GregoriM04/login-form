@@ -5,6 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <!-- Favicon  -->
+    <link rel="shortcut icon" href="./images/favicon.ico" type="image/x-icon">
+
+    <!-- Custom CSS -->
     <link rel="stylesheet" href="./CSS/style.css">
 
     <title>Login</title>
@@ -14,13 +18,18 @@
         <form action="#" id="form-frame">
             <ion-icon id="finger-logo" name="finger-print-outline"></ion-icon>
             <h2>Login</h2>
-            <input type="text" id="user" placeholder="Username" class="input-val">
+            <input type="text" id="user" placeholder="Username" class="input-val" required>
             <div>
-                <input type="password" id="password" placeholder="Password" class="input-val">
+                <input type="password" id="password" placeholder="Password" class="input-val" required>
                 <ion-icon name="eye-outline" id="show-hide-pass"></ion-icon>
             </div>
             <a href="#" class="pass-forgot">I forgot my password</a>
             <input type="submit" id="submit-btn" value="Submit">
+            <a href="#" class="google-login">
+                <img src="./images/icons8-google.svg" alt="google icon" class="google-icon">
+                <span class="google-name">Login with Google</span>
+                <ion-icon name="chevron-forward-outline" class="right-arrow"></ion-icon>
+            </a>
             <a href="#" class="signup">Sign Up</a>
         </form>
 
