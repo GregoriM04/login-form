@@ -15,6 +15,8 @@ Recent updates includes:
 
 - Spinner loader animation.
 
+- Login option using Google.
+
 ### Screenshot
 
 Below you can see a screenshot of the final result. (the image has been updated)
