@@ -82,16 +82,22 @@ body {
     top: calc(35% - 100px);
 }
 
-#form-frame #finger-logo {
+#form-frame .login-form {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.login-form #finger-logo {
     padding-top: 45px;
     font-size: 40px;
 }
 
-#form-frame h2 {
+.login-form h2 {
     padding: 20px;
 }
 
-#form-frame .input-val, #form-frame div .input-val {
+.login-form .input-val, .login-form div .input-val {
     min-width: 235px;
     min-height: 40px;
     margin: 6px;
@@ -103,16 +109,16 @@ body {
     border-bottom: 1px solid var(--dark-magenta);
 }
 
-#form-frame .input-val:focus, #form-frame div .input-val:focus {
+.login-form .input-val:focus, .login-form div .input-val:focus {
     border-bottom: 2px solid var(--dark-magenta);
     outline: none;
 }
 
-#form-frame div {
+.login-form div {
     position: relative;
 }
 
-#form-frame div #show-hide-pass {
+.login-form div #show-hide-pass {
     position: absolute;
     top: 15px;
     right: 10px;
@@ -122,16 +128,17 @@ body {
     font-size: 20px;
 }
 
-#form-frame .pass-forgot {
+.login-form .pass-forgot {
     font-size: 13px;
     margin: 5px 0 15px 80px;
     text-decoration: none;
 }
-#form-frame .pass-forgot:link, #form-frame .pass-forgot:visited {
+
+.login-form .pass-forgot:link, .login-form .pass-forgot:visited {
     color: var(--dark-cyan);
 }
 
-#form-frame #submit-btn {
+.login-form .btn-style {
     width: 240px;
     height: 40px;
     margin: 10px;
@@ -142,19 +149,19 @@ body {
     border-radius: 20px;
 }
 
-#form-frame #submit-btn:active {
+.login-form .btn-style:active {
     transform: scale(0.95);
     box-shadow: 3px 2px 22px 1px rgba(0, 0, 0, 0.24);
 }
 
-#form-frame .signup {
+.login-form .signup {
     font-size: 14px;
     margin-top: 10px;
     padding-bottom: 40px;
     text-decoration: none;
 }
 
-#form-frame .signup:link, #form-frame .signup:visited {
+.login-form .signup:link, .login-form .signup:visited {
     color: var(--dark-cyan);
 }
 
@@ -189,18 +196,18 @@ body {
 
 
 /* Hover effects */
-#form-frame div #show-hide-pass:hover {
+.login-form div #show-hide-pass:hover {
     color: var(--dark-magenta);
 }
 
-#form-frame .pass-forgot:hover, #form-frame .signup:hover {
+.login-form .pass-forgot:hover, .login-form .signup:hover {
     color: var(--dark-magenta);
     text-decoration: underline;
     transition: all 0.2s ease-out;
     -webkit-transition: all 0.2s ease-out;
 }
 
-#form-frame #submit-btn:hover {
+.login-form .btn-style:hover {
     background-color: var(--dark-magenta);
     color: var(--white);
     transition: all 0.2s ease-in;

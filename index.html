@@ -16,7 +16,9 @@
 <body>
     <main class="container">
         <form action="#" id="form-frame">
-            <ion-icon id="finger-logo" name="finger-print-outline"></ion-icon>
+            <!-- Login form section -->
+            <div class="login-form">
+                <ion-icon id="finger-logo" name="finger-print-outline"></ion-icon>
             <h2>Login</h2>
             <input type="text" id="user" placeholder="Username" class="input-val" required>
             <div>
@@ -24,13 +26,14 @@
                 <ion-icon name="eye-outline" id="show-hide-pass"></ion-icon>
             </div>
             <a href="#" class="pass-forgot">I forgot my password</a>
-            <input type="submit" id="submit-btn" value="Submit">
+            <input type="submit" id="submit-btn" value="Submit" class="btn-style">
             <a href="#" class="google-login">
                 <img src="./images/icons8-google.svg" alt="google icon" class="google-icon">
                 <span class="google-name">Login with Google</span>
                 <ion-icon name="chevron-forward-outline" class="right-arrow"></ion-icon>
             </a>
             <a href="#" class="signup">Sign Up</a>
+        </div>
         </form>
 
         <!-- Spinner -->

@@ -3,7 +3,7 @@
 const showHidePass = document.querySelector("#show-hide-pass");
 const password = document.querySelector("#password");
 
-showHidePass.addEventListener("click", function() {
+showHidePass.addEventListener("click", () => {
 
     // changing the icon 
     const name = showHidePass.getAttribute("name") === "eye-outline" ? "eye-off-outline" : "eye-outline";
@@ -15,14 +15,14 @@ showHidePass.addEventListener("click", function() {
 });
 
 // Spinner 
-window.addEventListener("load", function () {
+window.addEventListener("load", () => {
 
     // add the hidden class once the page loads
     const loader = document.querySelector(".loader");
     loader.classList.add("loader-hidden");
 
     // remove the tag once the page loads
-    loader.addEventListener("transitionend", function () {
+    loader.addEventListener("transitionend", () => {
        document.body.removeChild("loader") 
     });
 });
