@@ -26,3 +26,20 @@ window.addEventListener("load", () => {
        document.body.removeChild("loader") 
     });
 });
+
+
+// Password-reset movement settings 
+const login = document.querySelector(".login-form");
+const reset = document.querySelector(".reset-form");
+const forgotPassword = login.querySelector(".pass-forgot")
+const backButton = reset.querySelector(".back")
+
+forgotPassword.addEventListener('click', () => {
+    login.classList.add('not-active-sec');
+    reset.classList.add('active-sec');
+})
+
+backButton.addEventListener('click', () => {
+    login.classList.remove('not-active-sec');
+    reset.classList.remove('active-sec');
+})

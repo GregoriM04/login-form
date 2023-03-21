@@ -80,8 +80,10 @@ body {
     flex-direction: column;
     position: absolute;
     top: calc(35% - 100px);
+    overflow: hidden;
 }
 
+/* Login form section */
 #form-frame .login-form {
     display: flex;
     align-items: center;
@@ -97,7 +99,7 @@ body {
     padding: 20px;
 }
 
-.login-form .input-val, .login-form div .input-val {
+.input-val {
     min-width: 235px;
     min-height: 40px;
     margin: 6px;
@@ -109,7 +111,7 @@ body {
     border-bottom: 1px solid var(--dark-magenta);
 }
 
-.login-form .input-val:focus, .login-form div .input-val:focus {
+.input-val:focus {
     border-bottom: 2px solid var(--dark-magenta);
     outline: none;
 }
@@ -138,7 +140,7 @@ body {
     color: var(--dark-cyan);
 }
 
-.login-form .btn-style {
+.btn-style {
     width: 240px;
     height: 40px;
     margin: 10px;
@@ -149,7 +151,7 @@ body {
     border-radius: 20px;
 }
 
-.login-form .btn-style:active {
+.btn-style:active {
     transform: scale(0.95);
     box-shadow: 3px 2px 22px 1px rgba(0, 0, 0, 0.24);
 }
@@ -194,6 +196,66 @@ body {
     color: var(--dark-gray);
 }
 
+/* Reset form section */
+.reset-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--white);
+    position: absolute;
+    min-width: 350px;
+    min-height: 450px;
+    border-radius: 10px;
+}
+
+.reset-form .back {
+    align-self: flex-start;
+    margin: 80px 0 0 45px;
+    display: flex;
+    align-items: center;
+    font-size: 18px;
+    text-decoration: none;
+    color: var(--dark-cyan);
+}
+
+.reset-form .back:link, .reset-form .back:visited {
+    color: var(--dark-cyan);
+}
+
+.reset-form .padlock {
+    padding-top: 35px;
+    font-size: 40px;
+    margin-bottom: 20px;
+}
+
+.reset-form h2 {
+    margin: 15px 0;
+}
+
+.reset-form #send-btn {
+    margin-top: 25px;
+}
+
+.reset-form {
+    /* opacity: 0;
+    pointer-events: none; */
+    transition: all 0.3s ease;
+    transform: translateX(100%);
+}
+
+.active-sec {
+    opacity: 1;
+    pointer-events: all;
+    transition: all 0.3s ease;
+    transform: translateX(0);
+}
+.not-active-sec {
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.3s ease;
+    transform: translateX(-100%);
+}
+
 
 /* Hover effects */
 .login-form div #show-hide-pass:hover {
@@ -207,7 +269,7 @@ body {
     -webkit-transition: all 0.2s ease-out;
 }
 
-.login-form .btn-style:hover {
+.btn-style:hover {
     background-color: var(--dark-magenta);
     color: var(--white);
     transition: all 0.2s ease-in;
@@ -226,6 +288,15 @@ body {
     -webkit-transition: all 0.2s ease-out;
 }
 
+.reset-form .back:hover {
+    color: var(--dark-magenta);
+    transition: all 0.1s ease-in;
+}
+
+.reset-form .back:hover .left-arrow {
+    transform: scale(1.1) translateX(-2px);
+    transition: all 0.1s ease-in;
+}
 
 /* Keyframes Animations */
 /* Spinner */
