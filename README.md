@@ -38,6 +38,7 @@ Below you can see a screenshot of the final result. (the image has been updated)
 - CSS custom properties
 - Flexbox
 - Mobile-first workflow
+- Vanilla JavaScript
 
 
 ## Author
