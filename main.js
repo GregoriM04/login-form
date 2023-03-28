@@ -7,16 +7,27 @@ showHidePass.addEventListener("click", () => {
 
     // changing the icon 
     const name = showHidePass.getAttribute("name") === "eye-outline" ? "eye-off-outline" : "eye-outline";
-    showHidePass.setAttribute("name", name)
+    showHidePass.setAttribute("name", name);
 
     // charging the state of the input field
     const type = password.getAttribute("type") === "password" ? "text" : "password";
-        password.setAttribute("type", type);
+    password.setAttribute("type", type);
 });
 
 // Show and Hide the password functionality (Signup section)
+const showHideSignupPass = document.querySelector(".show-hide-pass-signup");
+const yourPass = document.querySelector(".your-password");
 
+showHideSignupPass.addEventListener("click", () => {
 
+    // changing the icon 
+    const name = showHideSignupPass.getAttribute("name")  === "eye-outline" ? "eye-off-outline" : "eye-outline";
+    showHideSignupPass.setAttribute("name", name);
+
+    // charging the state of the input field
+    const type = yourPass.getAttribute("type") === "password" ? "text" : "password";
+    yourPass.setAttribute("type", type);
+});
 
 // Spinner 
 window.addEventListener("load", () => {
@@ -33,7 +44,6 @@ window.addEventListener("load", () => {
 
 // clear inputs when section is not focus
 const allInputs = document.querySelectorAll(".input-val");
-
 
 // Password-reset movement settings 
 const login = document.querySelector(".login-form");

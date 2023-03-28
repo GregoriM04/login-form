@@ -20,7 +20,7 @@
             <div class="login-form">
                 <ion-icon id="finger-logo" name="finger-print-outline"></ion-icon>
                 <h2>Login</h2>
-                <input type="text" id="user" placeholder="Username" class="input-val" required>
+                <input type="text" id="user" placeholder="Username" class="input-val" required oninvalid="ths.setCustomValidity('Enter User Name Here')">
                 <div>
                     <input type="password" id="password" placeholder="Password" class="input-val" required>
                     <ion-icon name="eye-outline" id="show-hide-pass"></ion-icon>
@@ -53,16 +53,16 @@
                     <ion-icon name="chevron-down-outline"></ion-icon>
                 </a>
                 <h2>Sign up</h2>
-                <input type="email" placeholder="Your email address" class="input-val">
+                <input type="name" placeholder="Your name" class="input-val" required>
+                <input type="email" placeholder="Your email address" class="input-val" required>
                 <div>
-                    <input type="password" placeholder="Your password" class="input-val">
+                    <input type="password" placeholder="Your password" class="input-val your-password" required>
                     <ion-icon name="eye-outline" class="show-hide-pass-signup"></ion-icon>
                 </div>
-                <input type="password" placeholder="Confirm your password" class="input-val">  
                 <input type="submit" id="send-btn" value="Send" class="btn-style">
                 <a href="#" class="google-signup">
                     <img src="./images/icons8-google.svg" alt="google icon" class="google-icon">
-                    <span class="google-name">Login with Google</span>
+                    <span class="google-name">Sign up with Google</span>
                     <ion-icon name="chevron-forward-outline" class="right-arrow"></ion-icon>
 
                 </a>
@@ -70,7 +70,7 @@
         </form>
 
         <!-- Spinner -->
-        <!-- <div class="loader"></div> -->
+        <div class="loader"></div>
     </main>
 
     <!-- Custom Javascript -->
