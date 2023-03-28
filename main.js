@@ -87,5 +87,3 @@ hideBtn.addEventListener('click', () => {
     // clear inputs
     allInputs.forEach(input => input.value = '');
 });
-
-

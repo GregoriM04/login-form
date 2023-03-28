@@ -236,9 +236,9 @@ body {
     margin-top: 25px;
 }
 
+
+/* Login show/hide effect */
 .reset-form {
-    /* opacity: 0;
-    pointer-events: none; */
     transition: all 0.3s ease;
     transform: translateX(100%);
 }
@@ -273,7 +273,6 @@ body {
 
 .signup-form .hide {
     margin: 30px 0 20px 0;
-    /* background-color: red; */
     width: 150px;
     height: 30px;
     font-size: 30px;
@@ -282,12 +281,6 @@ body {
     align-items: center;
     cursor: pointer;
     color: var(--dark-cyan);
-}
-
-.hide:hover {
-    transform: scale(1.1) translateY(2px);
-    color: var(--dark-magenta);
-    transition: all 0.1s ease-in;
 }
 
 .signup-form h2 {
@@ -306,14 +299,7 @@ body {
     color: var(--dark-cyan);
     font-weight: 500;
     font-size: 20px;
-    /* margin-right: 20px; */
 }
-
-.signup-form div .show-hide-pass-signup:hover {
-    color: var(--dark-magenta);
-    transition: all 0.1s ease-in;
-}
-
 
 .google-signup {
     display: flex;
@@ -344,14 +330,10 @@ body {
     color: var(--dark-gray);
 }
 
-/* Signup show hide */
-
+/* Signup show/hide effect*/
 .signup-form {
-    /* opacity: 0;
-    pointer-events: none; */
     transform: translateY(110%);
     transition: all 0.3s ease;
-
 }
 .active-signup {
     opacity: 1;
@@ -408,6 +390,18 @@ body {
     transform: scale(1.1) translateX(-2px);
     transition: all 0.1s ease-in;
 }
+
+.hide:hover {
+    transform: scale(1.1) translateY(2px);
+    color: var(--dark-magenta);
+    transition: all 0.1s ease-in;
+}
+
+.signup-form div .show-hide-pass-signup:hover {
+    color: var(--dark-magenta);
+    transition: all 0.1s ease-in;
+}
+
 
 /* Keyframes Animations */
 /* Spinner */

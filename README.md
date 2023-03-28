@@ -1,6 +1,6 @@
 # LOGIN FORM 
 
-This is a free and design focus login form with HTML and CSS.
+This is a free and design focus login form with HTML, CSS and some Javascript. At the begining, this one was a simple login form, but over time some other features have been added to make it more functional. 
 
 
 ## Overview
@@ -9,13 +9,15 @@ This is a free and design focus login form with HTML and CSS.
 
 Users should be able to provide info easy and fast; and also, see view the optimal layout for the site depending on their device's screen size.
 
-Recent updates includes:
+Recent updates include:
 
 - Show and Hide password functionality.
 
 - Spinner loader animation.
 
 - Login option using Google.
+
+- Sign up option.
 
 ### Screenshot
 
