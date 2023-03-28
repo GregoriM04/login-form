@@ -16,21 +16,56 @@
 <body>
     <main class="container">
         <form action="#" id="form-frame">
-            <ion-icon id="finger-logo" name="finger-print-outline"></ion-icon>
-            <h2>Login</h2>
-            <input type="text" id="user" placeholder="Username" class="input-val" required>
-            <div>
-                <input type="password" id="password" placeholder="Password" class="input-val" required>
-                <ion-icon name="eye-outline" id="show-hide-pass"></ion-icon>
+            <!-- Login form section -->
+            <div class="login-form">
+                <ion-icon id="finger-logo" name="finger-print-outline"></ion-icon>
+                <h2>Login</h2>
+                <input type="text" id="user" placeholder="Username" class="input-val" required oninvalid="ths.setCustomValidity('Enter User Name Here')">
+                <div>
+                    <input type="password" id="password" placeholder="Password" class="input-val" required>
+                    <ion-icon name="eye-outline" id="show-hide-pass"></ion-icon>
+                </div>
+                <a href="#" class="pass-forgot">I forgot my password</a>
+                <input type="submit" id="submit-btn" value="Submit" class="btn-style">
+                <a href="#" class="google-login">
+                    <img src="./images/icons8-google.svg" alt="google icon" class="google-icon">
+                    <span class="google-name">Login with Google</span>
+                    <ion-icon name="chevron-forward-outline" class="right-arrow"></ion-icon>
+                </a>
+                <a href="#" class="signup">Sign Up</a>
             </div>
-            <a href="#" class="pass-forgot">I forgot my password</a>
-            <input type="submit" id="submit-btn" value="Submit">
-            <a href="#" class="google-login">
-                <img src="./images/icons8-google.svg" alt="google icon" class="google-icon">
-                <span class="google-name">Login with Google</span>
-                <ion-icon name="chevron-forward-outline" class="right-arrow"></ion-icon>
-            </a>
-            <a href="#" class="signup">Sign Up</a>
+
+            <!-- Reset form section -->
+            <div class="reset-form">
+                <a class="back">
+                    <ion-icon name="chevron-back-outline" class="left-arrow"></ion-icon>
+                    Back
+                </a>
+                <ion-icon name="lock-closed-outline" class="padlock"></ion-icon>
+                <h2>Reset password</h2>
+                <input type="text" class="input-val" placeholder="Your email address" required>
+                <input type="submit" id="send-btn" value="Send" class="btn-style">
+            </div>
+
+            <!-- Sign up form section -->
+            <div class="signup-form">
+                <a class="hide">
+                    <ion-icon name="chevron-down-outline"></ion-icon>
+                </a>
+                <h2>Sign up</h2>
+                <input type="name" placeholder="Your name" class="input-val" required>
+                <input type="email" placeholder="Your email address" class="input-val" required>
+                <div>
+                    <input type="password" placeholder="Your password" class="input-val your-password" required>
+                    <ion-icon name="eye-outline" class="show-hide-pass-signup"></ion-icon>
+                </div>
+                <input type="submit" id="send-btn" value="Send" class="btn-style">
+                <a href="#" class="google-signup">
+                    <img src="./images/icons8-google.svg" alt="google icon" class="google-icon">
+                    <span class="google-name">Sign up with Google</span>
+                    <ion-icon name="chevron-forward-outline" class="right-arrow"></ion-icon>
+                </a>
+            </div>
         </form>
 
         <!-- Spinner -->

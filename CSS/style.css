@@ -80,18 +80,26 @@ body {
     flex-direction: column;
     position: absolute;
     top: calc(35% - 100px);
+    overflow: hidden;
 }
 
-#form-frame #finger-logo {
+/* Login form section */
+#form-frame .login-form {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.login-form #finger-logo {
     padding-top: 45px;
     font-size: 40px;
 }
 
-#form-frame h2 {
+.login-form h2 {
     padding: 20px;
 }
 
-#form-frame .input-val, #form-frame div .input-val {
+.input-val {
     min-width: 235px;
     min-height: 40px;
     margin: 6px;
@@ -103,16 +111,16 @@ body {
     border-bottom: 1px solid var(--dark-magenta);
 }
 
-#form-frame .input-val:focus, #form-frame div .input-val:focus {
+.input-val:focus {
     border-bottom: 2px solid var(--dark-magenta);
     outline: none;
 }
 
-#form-frame div {
+.login-form div {
     position: relative;
 }
 
-#form-frame div #show-hide-pass {
+.login-form div #show-hide-pass {
     position: absolute;
     top: 15px;
     right: 10px;
@@ -122,16 +130,17 @@ body {
     font-size: 20px;
 }
 
-#form-frame .pass-forgot {
+.login-form .pass-forgot {
     font-size: 13px;
     margin: 5px 0 15px 80px;
     text-decoration: none;
 }
-#form-frame .pass-forgot:link, #form-frame .pass-forgot:visited {
+
+.login-form .pass-forgot:link, .login-form .pass-forgot:visited {
     color: var(--dark-cyan);
 }
 
-#form-frame #submit-btn {
+.btn-style {
     width: 240px;
     height: 40px;
     margin: 10px;
@@ -142,19 +151,19 @@ body {
     border-radius: 20px;
 }
 
-#form-frame #submit-btn:active {
+.btn-style:active {
     transform: scale(0.95);
     box-shadow: 3px 2px 22px 1px rgba(0, 0, 0, 0.24);
 }
 
-#form-frame .signup {
+.login-form .signup {
     font-size: 14px;
     margin-top: 10px;
     padding-bottom: 40px;
     text-decoration: none;
 }
 
-#form-frame .signup:link, #form-frame .signup:visited {
+.login-form .signup:link, .login-form .signup:visited {
     color: var(--dark-cyan);
 }
 
@@ -187,36 +196,210 @@ body {
     color: var(--dark-gray);
 }
 
+/* Reset form section */
+.reset-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--white);
+    position: absolute;
+    min-width: 350px;
+    min-height: 450px;
+    border-radius: 10px;
+}
+
+.reset-form .back {
+    align-self: flex-start;
+    margin: 80px 0 0 45px;
+    display: flex;
+    align-items: center;
+    font-size: 18px;
+    text-decoration: none;
+    color: var(--dark-cyan);
+}
+
+.reset-form .back:link, .reset-form .back:visited {
+    color: var(--dark-cyan);
+}
+
+.reset-form .padlock {
+    padding-top: 35px;
+    font-size: 40px;
+    margin-bottom: 20px;
+}
+
+.reset-form h2 {
+    margin: 15px 0;
+}
+
+.reset-form #send-btn {
+    margin-top: 25px;
+}
+
+
+/* Login show/hide effect */
+.reset-form {
+    transition: all 0.3s ease;
+    transform: translateX(100%);
+}
+
+.active-sec {
+    opacity: 1;
+    pointer-events: all;
+    transition: all 0.3s ease;
+    transform: translateX(0);
+}
+.not-active-sec {
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.3s ease;
+    transform: translateX(-100%);
+}
+
+
+/* Sign up form section */
+.signup-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 350px;
+    min-height: 450px;
+    background-color: var(--white);
+    border-radius: 9px;
+    margin-top: 30px;
+    box-shadow: 0px -14px 30px -8px rgba(0,0,0,0.1),0px 10px 15px -3px rgba(0,0,0,0.1);
+    position: absolute;
+}
+
+.signup-form .hide {
+    margin: 30px 0 20px 0;
+    width: 150px;
+    height: 30px;
+    font-size: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    color: var(--dark-cyan);
+}
+
+.signup-form h2 {
+    margin: 10px 0;
+}
+
+.signup-form div {
+    position: relative;
+}
+
+.signup-form div .show-hide-pass-signup {
+    position: absolute;
+    top: 15px;
+    right: 10px;
+    cursor: pointer;
+    color: var(--dark-cyan);
+    font-weight: 500;
+    font-size: 20px;
+}
+
+.google-signup {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: 10px auto;
+    width: 240px;
+    height: 40px;
+    background-color: var(--slight-gray);
+    padding: 5px;
+    border-radius: 20px;
+    text-decoration: none;
+    color: var(--dark-gray);
+    cursor: pointer;
+}
+
+.google-signup:active {
+    transform: scale(0.95);
+    box-shadow: 3px 2px 22px 1px rgba(0, 0, 0, 0.24);
+}
+
+.google-signup .google-icon {
+    width: 30px;
+    height: auto;
+}
+
+.google-signup .google-name {
+    color: var(--dark-gray);
+}
+
+/* Signup show/hide effect*/
+.signup-form {
+    transform: translateY(110%);
+    transition: all 0.3s ease;
+}
+.active-signup {
+    opacity: 1;
+    pointer-events: all;
+    transform: translateY(0);
+    transition: all 0.3s ease;
+    
+}
+.not-active-signup {
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(-100%);
+    transition: all 0.3s ease;
+}
+
 
 /* Hover effects */
-#form-frame div #show-hide-pass:hover {
+.login-form div #show-hide-pass:hover {
     color: var(--dark-magenta);
 }
 
-#form-frame .pass-forgot:hover, #form-frame .signup:hover {
+.login-form .pass-forgot:hover, .login-form .signup:hover {
     color: var(--dark-magenta);
     text-decoration: underline;
     transition: all 0.2s ease-out;
     -webkit-transition: all 0.2s ease-out;
 }
 
-#form-frame #submit-btn:hover {
+.btn-style:hover {
     background-color: var(--dark-magenta);
     color: var(--white);
     transition: all 0.2s ease-in;
     -webkit-transition: all 0.2s ease-out;
 }
 
-.google-login:hover {
+.google-login:hover, .google-signup:hover {
     background-color: var(--light-gray);
     transition: all 0.2s ease-in;
     -webkit-transition: all 0.2s ease-out;
 }
 
-.google-login:hover .right-arrow {
+.google-login:hover .right-arrow, .google-signup:hover .right-arrow {
     transform: scale(1.2) translateX(2px);
     transition: all 0.2s ease-in;
     -webkit-transition: all 0.2s ease-out;
+}
+
+.reset-form .back:hover {
+    color: var(--dark-magenta);
+    transition: all 0.1s ease-in;
+}
+
+.reset-form .back:hover .left-arrow {
+    transform: scale(1.1) translateX(-2px);
+    transition: all 0.1s ease-in;
+}
+
+.hide:hover {
+    transform: scale(1.1) translateY(2px);
+    color: var(--dark-magenta);
+    transition: all 0.1s ease-in;
+}
+
+.signup-form div .show-hide-pass-signup:hover {
+    color: var(--dark-magenta);
+    transition: all 0.1s ease-in;
 }
 
 
